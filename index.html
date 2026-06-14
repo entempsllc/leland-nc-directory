@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leland NC Directory | Your Complete Local Guide to Leland, North Carolina</title>
+<meta name="description" content="Complete local guide to Leland, NC. Find businesses, schools, healthcare, parks, events, emergency contacts, and city services for Leland residents.">
+<meta name="keywords" content="Leland NC, Leland North Carolina directory, Leland NC businesses, Leland NC guide, Brunswick County NC, Wilmington suburb">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&family=Merriweather:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ocean: #0D5C7A;
+    --ocean-mid: #1A7A9C;
+    --ocean-light: #3399BA;
+    --ocean-pale: #E5F4FA;
+    --seafoam: #3DA88C;
+    --seafoam-pale: #E5F6F2;
+    --sand: #F6F3EC;
+    --dune: #E8DFC8;
+    --ink: #162030;
+    --mid: #4A6070;
+    --border: #C8D8E0;
+    --white: #FFFFFF;
+    --coral: #D4634A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Nunito', sans-serif; background: var(--sand); color: var(--ink); }
+
+  nav { background: var(--ocean); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(13,92,122,0.3); }
+  .n-brand { color: white; font-family: 'Merriweather', serif; font-size: 1.3rem; padding: 13px 0; text-decoration: none; display: flex; align-items: center; gap: 9px; }
+  .n-brand .shell { font-size: 1.2rem; }
+  .n-brand .sub { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; background: var(--seafoam); padding: 2px 7px; border-radius: 3px; color: white; letter-spacing: 0.05em; }
+  .n-links { display: flex; gap: 3px; }
+  .n-links a { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 0.8rem; font-weight: 700; padding: 7px 11px; border-radius: 4px; }
+  .n-links a:hover { background: rgba(255,255,255,0.12); color: white; }
+
+  .hero { background: linear-gradient(145deg, var(--ocean) 0%, #0A4560 50%, #082E40 100%); color: white; padding: 54px 24px 46px; overflow: hidden; position: relative; }
+  .hero::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--seafoam), var(--ocean-light), var(--seafoam)); }
+  .h-wave { position: absolute; bottom: -10px; left: 0; right: 0; opacity: 0.06; font-size: 8rem; text-align: center; line-height: 1; pointer-events: none; }
+  .h-inner { max-width: 780px; margin: 0 auto; text-align: center; position: relative; }
+  .h-tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; color: var(--seafoam); text-transform: uppercase; margin-bottom: 13px; }
+  .h-inner h1 { font-family: 'Merriweather', serif; font-size: clamp(2rem, 4.5vw, 3.4rem); line-height: 1.15; margin-bottom: 13px; }
+  .h-inner h1 em { font-style: italic; color: #7DD5ED; }
+  .h-inner p { font-size: 0.95rem; color: rgba(255,255,255,0.68); max-width: 480px; margin: 0 auto 26px; line-height: 1.65; font-weight: 300; }
+  .h-stats { display: flex; justify-content: center; gap: 36px; flex-wrap: wrap; }
+  .h-stat strong { display: block; font-family: 'Merriweather', serif; font-size: 1.8rem; color: #7DD5ED; }
+  .h-stat span { font-size: 0.68rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .coastal-strip { background: var(--seafoam); color: white; padding: 9px 24px; display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; font-size: 0.8rem; font-weight: 700; }
+  .coastal-strip a { color: white; text-decoration: none; }
+  .coastal-strip a:hover { text-decoration: underline; }
+
+  .ad-bar { background: #EEE9E0; border: 1px dashed #C0B8A8; text-align: center; padding: 18px; font-size: 0.7rem; color: #AAA; }
+
+  .s-sec { background: white; border-bottom: 1px solid var(--border); padding: 22px 24px; }
+  .s-wrap { max-width: 660px; margin: 0 auto; }
+  .s-lbl { font-size: 0.7rem; font-weight: 900; color: var(--ocean); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 7px; }
+  .s-box { display: flex; border: 2px solid var(--ocean); border-radius: 6px; overflow: hidden; }
+  .s-box input { flex: 1; padding: 11px 14px; font-size: 0.9rem; border: none; outline: none; font-family: 'Nunito', sans-serif; }
+  .s-box button { background: var(--ocean); color: white; border: none; padding: 11px 20px; font-weight: 900; cursor: pointer; font-size: 0.82rem; font-family: 'Nunito', sans-serif; }
+  .s-pills { display: flex; gap: 6px; margin-top: 9px; flex-wrap: wrap; }
+  .s-pills a { font-size: 0.72rem; background: var(--ocean-pale); color: var(--ocean); padding: 3px 10px; border-radius: 20px; text-decoration: none; font-weight: 700; }
+
+  .main { max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: grid; grid-template-columns: 1fr 285px; gap: 24px; }
+  @media (max-width: 870px) { .main { grid-template-columns: 1fr; } .n-links { display: none; } }
+
+  .section { margin-bottom: 28px; }
+  .sec-title { display: flex; align-items: center; gap: 10px; margin-bottom: 13px; }
+  .sec-title h2 { font-family: 'Merriweather', serif; font-size: 1.28rem; color: var(--ocean); font-weight: 700; }
+  .sec-title::after { content: ''; flex: 1; height: 2px; background: linear-gradient(90deg, var(--ocean-pale), transparent); }
+  .sec-title .chip { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; background: var(--ocean-pale); color: var(--ocean-mid); padding: 2px 7px; border-radius: 3px; white-space: nowrap; }
+
+  .cat-wrap { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 8px; }
+  .cat { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 13px 9px; text-align: center; text-decoration: none; color: var(--ink); transition: all 0.15s; }
+  .cat:hover { border-color: var(--seafoam); background: var(--seafoam-pale); }
+  .cat .e { font-size: 1.65rem; display: block; margin-bottom: 4px; }
+  .cat .n { font-size: 0.74rem; font-weight: 700; display: block; }
+  .cat .s { font-size: 0.62rem; color: var(--mid); }
+
+  .biz-l { display: flex; flex-direction: column; gap: 8px; }
+  .biz { background: white; border: 1px solid var(--border); border-radius: 7px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .biz:hover { border-color: var(--seafoam); }
+  .biz .cat-l { font-size: 0.67rem; color: var(--seafoam); font-weight: 900; text-transform: uppercase; letter-spacing: 0.07em; }
+  .biz h3 { font-size: 0.9rem; font-weight: 700; margin: 2px 0; }
+  .biz .addr { font-size: 0.74rem; color: var(--mid); }
+  .biz .ph a { font-size: 0.78rem; color: var(--ocean-mid); font-weight: 700; text-decoration: none; }
+  .pip { font-size: 0.65rem; padding: 3px 8px; border-radius: 10px; font-weight: 700; white-space: nowrap; }
+  .p-ocean { background: var(--ocean-pale); color: var(--ocean); }
+  .p-sea { background: var(--seafoam-pale); color: #1D6050; }
+  .p-cor { background: #FEF2EE; color: #8B2A18; }
+
+  .emerg { background: #FFF4F4; border: 2px solid #FECACA; border-radius: 8px; padding: 15px 17px; }
+  .emerg h3 { color: #B91C1C; font-size: 0.9rem; font-weight: 900; margin-bottom: 9px; }
+  .e-g { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .en .l { font-size: 0.62rem; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.07em; }
+  .en a { font-size: 1rem; color: #B91C1C; font-weight: 700; text-decoration: none; font-family: 'IBM Plex Mono', monospace; display: block; }
+
+  .tbl { width: 100%; border-collapse: collapse; font-size: 0.79rem; }
+  .tbl th { background: var(--ocean-pale); color: var(--ocean); text-align: left; padding: 8px 11px; font-weight: 900; font-size: 0.71rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .tbl td { padding: 8px 11px; border-bottom: 1px solid var(--border); }
+  .tbl tr:last-child td { border-bottom: none; }
+  .tbl tr:hover td { background: var(--ocean-pale); }
+  .tbl a { color: var(--coral); text-decoration: none; font-weight: 700; }
+
+  .ig { display: grid; grid-template-columns: repeat(auto-fill, minmax(235px, 1fr)); gap: 12px; }
+  .ic { background: white; border: 1px solid var(--border); border-radius: 7px; padding: 14px; }
+  .ic h3 { font-size: 0.82rem; font-weight: 900; color: var(--ocean); margin-bottom: 10px; display: flex; align-items: center; gap: 5px; }
+  .ic ul { list-style: none; }
+  .ic ul li { padding: 4px 0; border-bottom: 1px solid var(--ocean-pale); font-size: 0.78rem; display: flex; justify-content: space-between; }
+  .ic ul li:last-child { border-bottom: none; }
+  .ic ul li a { color: var(--coral); text-decoration: none; font-weight: 700; }
+  .ic .sm { font-size: 0.72rem; color: var(--mid); }
+
+  .evl { display: flex; flex-direction: column; gap: 8px; }
+  .ev { background: white; border: 1px solid var(--border); border-radius: 7px; padding: 12px; display: flex; gap: 11px; }
+  .ev-d { background: var(--ocean); color: white; border-radius: 5px; min-width: 45px; text-align: center; padding: 6px 8px; }
+  .ev-d .m { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.7); }
+  .ev-d .d { font-size: 1.4rem; font-family: 'Merriweather', serif; line-height: 1; }
+  .ev-i h4 { font-size: 0.84rem; font-weight: 700; margin-bottom: 2px; }
+  .ev-i p { font-size: 0.74rem; color: var(--mid); line-height: 1.4; }
+
+  .sb { }
+  .sb-card { background: white; border: 1px solid var(--border); border-radius: 7px; padding: 14px; margin-bottom: 12px; }
+  .sb-card h3 { font-size: 0.75rem; font-weight: 900; color: var(--ocean); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid var(--seafoam); }
+  .sb-card ul { list-style: none; }
+  .sb-card ul li { padding: 4px 0; font-size: 0.78rem; border-bottom: 1px solid var(--ocean-pale); }
+  .sb-card ul li:last-child { border-bottom: none; }
+  .sb-card ul li a { color: var(--coral); text-decoration: none; font-weight: 700; }
+  .ad-sb { background: #ECE8E0; border: 1px dashed #BEB6A8; text-align: center; padding: 36px 12px; font-size: 0.68rem; color: #AAA; border-radius: 7px; margin-bottom: 12px; }
+  .map-b { background: var(--ocean-pale); border: 1px solid var(--border); border-radius: 7px; height: 185px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+  .map-b a { font-size: 0.76rem; color: var(--coral); text-decoration: none; font-weight: 700; }
+
+  footer { background: var(--ocean); color: rgba(255,255,255,0.6); padding: 34px 24px 18px; margin-top: 32px; }
+  .f-g { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 22px; margin-bottom: 22px; }
+  .f-c h4 { color: white; font-size: 0.82rem; font-weight: 900; margin-bottom: 9px; }
+  .f-c ul { list-style: none; }
+  .f-c ul li { padding: 3px 0; }
+  .f-c ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.77rem; }
+  .f-c ul li a:hover { color: #7DD5ED; }
+  .f-b { max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; display: flex; justify-content: space-between; font-size: 0.7rem; flex-wrap: wrap; gap: 6px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="n-brand"><span class="shell">🌊</span> Leland, NC <span class="sub">DIRECTORY</span></a>
+  <div class="n-links">
+    <a href="#biz">Businesses</a>
+    <a href="#schools">Schools</a>
+    <a href="#health">Healthcare</a>
+    <a href="#events">Events</a>
+    <a href="#city">Town Hall</a>
+    <a href="#beach">Beach Access</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="h-wave">🌊</div>
+  <div class="h-inner">
+    <div class="h-tag">Brunswick County · Greater Wilmington · ZIP 28451</div>
+    <h1>Your Guide to<br><em>Leland, North Carolina</em></h1>
+    <p>Everything Leland residents need — local businesses, schools, healthcare, beaches, events, and city services. Your coastal community hub.</p>
+    <div class="h-stats">
+      <div class="h-stat"><strong>~23K</strong><span>Residents</span></div>
+      <div class="h-stat"><strong>9.4%</strong><span>Annual Growth</span></div>
+      <div class="h-stat"><strong>10 min</strong><span>to Wilmington</span></div>
+      <div class="h-stat"><strong>30 min</strong><span>to Beach</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="coastal-strip">
+  <a href="https://forecast.weather.gov/MapClick.php?CityName=Leland&state=NC" target="_blank">🌤️ Leland Weather</a>
+  <a href="https://www.brunswickcountync.gov" target="_blank">🏛️ Brunswick County</a>
+  <a href="https://www.ncdot.gov/travel-maps/travel-information/" target="_blank">🚗 NC Road Info</a>
+  <a href="https://www.weather.gov/ilm/" target="_blank">⛈️ ILM Weather Alerts</a>
+  <a href="https://www.starnewsonline.com" target="_blank">📰 StarNews Wilmington</a>
+  <a href="https://www.ncbeaches.com" target="_blank">🏖️ NC Beach Conditions</a>
+</div>
+
+<div class="ad-bar">ADVERTISEMENT — 728×90 Leaderboard Ad Unit</div>
+
+<div class="s-sec">
+  <div class="s-wrap">
+    <div class="s-lbl">Search Leland, NC</div>
+    <div class="s-box">
+      <input type="text" placeholder="Restaurants, schools, doctors, contractors...">
+      <button>Search</button>
+    </div>
+    <div class="s-pills">
+      <a href="#restaurants">Dining</a>
+      <a href="#health">Healthcare</a>
+      <a href="#schools">Schools</a>
+      <a href="#home">Home Services</a>
+      <a href="#beach">Beach & Outdoors</a>
+      <a href="#realestate">Real Estate</a>
+      <a href="#childcare">Childcare</a>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+<div class="content">
+
+  <div class="section">
+    <div class="emerg">
+      <h3>🚨 Emergency & Key Numbers — Leland, NC</h3>
+      <div class="e-g">
+        <div class="en"><span class="l">Emergency</span><a href="tel:911">911</a></div>
+        <div class="en"><span class="l">Leland Police</span><a href="tel:9103715000">(910) 371-5000</a></div>
+        <div class="en"><span class="l">Leland Fire/Rescue</span><a href="tel:9103715000">(910) 371-5000</a></div>
+        <div class="en"><span class="l">Brunswick Co. Sheriff</span><a href="tel:9102532020">(910) 253-2020</a></div>
+        <div class="en"><span class="l">Poison Control</span><a href="tel:18002221222">1-800-222-1222</a></div>
+        <div class="en"><span class="l">Town Hall</span><a href="tel:9103715000">(910) 371-5000</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="biz">
+    <div class="sec-title"><h2>Browse by Category</h2><span class="chip">LELAND NC</span></div>
+    <div class="cat-wrap">
+      <a href="#restaurants" class="cat"><span class="e">🍽️</span><span class="n">Restaurants</span><span class="s">Dining & Food</span></a>
+      <a href="#health" class="cat"><span class="e">🏥</span><span class="n">Healthcare</span><span class="s">Docs & Clinics</span></a>
+      <a href="#home" class="cat"><span class="e">🔨</span><span class="n">Home Services</span><span class="s">Repair & Build</span></a>
+      <a href="#beach" class="cat"><span class="e">🏖️</span><span class="n">Beach & Outdoors</span><span class="s">Activities</span></a>
+      <a href="#childcare" class="cat"><span class="e">🧒</span><span class="n">Childcare</span><span class="s">Daycares</span></a>
+      <a href="#realestate" class="cat"><span class="e">🏡</span><span class="n">Real Estate</span><span class="s">Buy & Rent</span></a>
+      <a href="#grocery" class="cat"><span class="e">🛒</span><span class="n">Grocery</span><span class="s">Food Stores</span></a>
+      <a href="#fitness" class="cat"><span class="e">💪</span><span class="n">Fitness</span><span class="s">Gyms</span></a>
+      <a href="#beauty" class="cat"><span class="e">✂️</span><span class="n">Beauty</span><span class="s">Salons & Spa</span></a>
+      <a href="#pets" class="cat"><span class="e">🐾</span><span class="n">Pets</span><span class="s">Vet & Grooming</span></a>
+      <a href="#banking" class="cat"><span class="e">🏦</span><span class="n">Banking</span><span class="s">Finance</span></a>
+      <a href="#churches" class="cat"><span class="e">⛪</span><span class="n">Churches</span><span class="s">Community</span></a>
+    </div>
+  </div>
+
+  <div class="section" id="restaurants">
+    <div class="sec-title"><h2>Restaurants & Dining</h2><span class="chip">LELAND NC</span></div>
+    <div class="biz-l">
+      <div class="biz"><div><div class="cat-l">Seafood · Local Favorite</div><h3>Bridgewater Wines & Bistro</h3><div class="addr">📍 511 Olde Waterford Way, Leland NC 28451</div><div class="ph"><a href="tel:9103711919">(910) 371-1919</a></div></div><span class="pip p-sea">$$$</span></div>
+      <div class="biz"><div><div class="cat-l">Coffee · Café</div><h3>Hidden Grounds Coffee</h3><div class="addr">📍 Leland NC 28451</div><div class="ph"><a href="tel:9103711900">(910) 371-1900</a></div></div><span class="pip p-ocean">$</span></div>
+      <div class="biz"><div><div class="cat-l">American · Casual</div><h3>Chili's Grill & Bar – Leland</h3><div class="addr">📍 Westgate Town Center, Leland NC 28451</div><div class="ph"><a href="tel:9103710100">(910) 371-0100</a></div></div><span class="pip p-ocean">$$</span></div>
+      <div class="biz"><div><div class="cat-l">Mexican</div><h3>El Cerro Mexican Restaurant</h3><div class="addr">📍 Leland, NC 28451</div><div class="ph"><a href="tel:9103712200">(910) 371-2200</a></div></div><span class="pip p-ocean">$$</span></div>
+      <div class="biz"><div><div class="cat-l">BBQ</div><h3>Smithfield's Chicken 'N Bar-B-Q</h3><div class="addr">📍 Leland, NC 28451</div><div class="ph"><a href="tel:9103713300">(910) 371-3300</a></div></div><span class="pip p-ocean">$</span></div>
+    </div>
+  </div>
+
+  <div class="ad-bar" style="margin:12px 0; border-radius:7px;">ADVERTISEMENT — 728×90 In-Content</div>
+
+  <div class="section" id="schools">
+    <div class="sec-title"><h2>Brunswick County Schools in Leland</h2><span class="chip">BRUNSWICK CO. SCHOOLS</span></div>
+    <table class="tbl">
+      <thead><tr><th>School</th><th>Grades</th><th>Address</th><th>Phone</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.bcswan.net" target="_blank">North Brunswick High School</a></td><td>9–12</td><td>114 Scorpion Dr, Leland NC 28451</td><td><a href="tel:9103710680">(910) 371-0680</a></td></tr>
+        <tr><td><a href="https://www.bcswan.net" target="_blank">Leland Middle School</a></td><td>6–8</td><td>901 Village Rd NE, Leland NC 28451</td><td><a href="tel:9103712480">(910) 371-2480</a></td></tr>
+        <tr><td><a href="https://www.bcswan.net" target="_blank">Belville Elementary School</a></td><td>K–5</td><td>700 Old Fayetteville Rd, Leland NC</td><td><a href="tel:9103711230">(910) 371-1230</a></td></tr>
+        <tr><td><a href="https://www.bcswan.net" target="_blank">Lincoln Elementary School</a></td><td>K–5</td><td>Leland NC 28451</td><td><a href="tel:9103712460">(910) 371-2460</a></td></tr>
+        <tr><td><a href="https://www.bcswan.net" target="_blank">Town Creek Middle School</a></td><td>6–8</td><td>Brunswick County, near Leland</td><td><a href="tel:9103713200">(910) 371-3200</a></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:8px; font-size:0.75rem; color:var(--mid);">Brunswick County Schools: <a href="https://www.bcswan.net" target="_blank" style="color:var(--coral);">bcswan.net</a> · <a href="tel:9102533000" style="color:var(--coral);">(910) 253-3000</a></p>
+  </div>
+
+  <div class="section" id="health">
+    <div class="sec-title"><h2>Healthcare & Medical</h2><span class="chip">LELAND NC AREA</span></div>
+    <div class="biz-l">
+      <div class="biz"><div><div class="cat-l">Hospital · ER</div><h3>Novant Health NHRMC – Wilmington</h3><div class="addr">📍 2131 S 17th St, Wilmington NC (10 min)</div><div class="ph"><a href="tel:9103432000">(910) 343-2000</a></div></div><span class="pip p-sea">ER</span></div>
+      <div class="biz"><div><div class="cat-l">Urgent Care</div><h3>FastMed Urgent Care – Leland</h3><div class="addr">📍 Westgate Town Center, Leland NC 28451</div><div class="ph"><a href="tel:9103717100">(910) 371-7100</a></div></div><span class="pip p-ocean">Walk-In</span></div>
+      <div class="biz"><div><div class="cat-l">Primary Care</div><h3>Wilmington Health – Leland</h3><div class="addr">📍 Leland, NC 28451</div><div class="ph"><a href="tel:9103716200">(910) 371-6200</a></div></div><span class="pip p-ocean">Primary Care</span></div>
+      <div class="biz"><div><div class="cat-l">Dental</div><h3>BlueWave Dentistry – Leland</h3><div class="addr">📍 1152 Lillibridge Dr, Leland NC 28451</div><div class="ph"><a href="tel:9107691838">(910) 769-1838</a></div></div><span class="pip p-ocean">Dental</span></div>
+    </div>
+  </div>
+
+  <div class="ad-bar" style="margin:12px 0; border-radius:7px;">ADVERTISEMENT — 728×90 In-Content</div>
+
+  <div class="section" id="city">
+    <div class="sec-title"><h2>Town of Leland Government</h2><span class="chip">TOWN SERVICES</span></div>
+    <div class="ig">
+      <div class="ic">
+        <h3>🏛️ Town Hall</h3>
+        <ul>
+          <li><span>Address</span><span class="sm">102 Town Hall Dr, Leland NC 28451</span></li>
+          <li><span>Phone</span><a href="tel:9103715000">(910) 371-5000</a></li>
+          <li><span>Website</span><a href="https://www.townofleland.com" target="_blank">townofleland.com</a></li>
+          <li><span>Hours</span><span class="sm">Mon–Fri 8am–5pm</span></li>
+        </ul>
+      </div>
+      <div class="ic">
+        <h3>💧 Utilities</h3>
+        <ul>
+          <li><span>Water/Sewer</span><a href="tel:9103715000">(910) 371-5000</a></li>
+          <li><span>Duke Energy</span><a href="tel:8005777743">800-777-7743</a></li>
+          <li><span>Piedmont Gas</span><a href="tel:8004524900">800-452-4900</a></li>
+          <li><span>Trash Service</span><a href="https://www.townofleland.com" target="_blank">Town Portal</a></li>
+        </ul>
+      </div>
+      <div class="ic">
+        <h3>📋 Permits & Planning</h3>
+        <ul>
+          <li><span>Building Permits</span><a href="https://www.townofleland.com" target="_blank">Town Portal</a></li>
+          <li><span>Planning Dept</span><a href="tel:9103715000">(910) 371-5000</a></li>
+          <li><span>Business License</span><a href="https://www.townofleland.com" target="_blank">Town Site</a></li>
+          <li><span>Code Enforcement</span><a href="tel:9103715000">(910) 371-5000</a></li>
+        </ul>
+      </div>
+      <div class="ic">
+        <h3>📬 County Resources</h3>
+        <ul>
+          <li><span>Brunswick County</span><a href="https://www.brunswickcountync.gov" target="_blank">Gov Website</a></li>
+          <li><span>Property Tax</span><a href="tel:9102532829">(910) 253-2829</a></li>
+          <li><span>Voter Registration</span><a href="https://www.brunswickcountync.gov" target="_blank">Register</a></li>
+          <li><span>Public Library</span><a href="https://www.brunswicolibraries.org" target="_blank">Brunswick Library</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="beach">
+    <div class="sec-title"><h2>Beaches & Outdoor Recreation</h2><span class="chip">COASTAL LIVING</span></div>
+    <table class="tbl">
+      <thead><tr><th>Beach / Destination</th><th>Distance from Leland</th><th>Features</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Wrightsville Beach</strong></td><td>~20 min east</td><td>Swimming, Surfing, Fishing, Restaurants</td></tr>
+        <tr><td><strong>Carolina Beach</strong></td><td>~25 min south</td><td>Boardwalk, Pier Fishing, State Park</td></tr>
+        <tr><td><strong>Kure Beach</strong></td><td>~30 min south</td><td>NC Aquarium, Fort Fisher, Quiet beach</td></tr>
+        <tr><td><strong>Oak Island</strong></td><td>~35 min southwest</td><td>Family beaches, NC's longest barrier island</td></tr>
+        <tr><td><strong>Bald Head Island</strong></td><td>~50 min (ferry)</td><td>No cars, pristine beaches, lighthouse</td></tr>
+        <tr><td><strong>Cape Fear River Trail</strong></td><td>Local – Leland/Wilmington</td><td>Biking, Walking, Nature, Kayaking access</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="events">
+    <div class="sec-title"><h2>Leland Community Events</h2><span class="chip">2025–2026</span></div>
+    <div class="evl">
+      <div class="ev"><div class="ev-d"><div class="m">Jul</div><div class="d">4</div></div><div class="ev-i"><h4>Leland 4th of July Celebration</h4><p>Annual fireworks display, food trucks, live music · Leland Community Park</p></div></div>
+      <div class="ev"><div class="ev-d"><div class="m">Jul</div><div class="d">19</div></div><div class="ev-i"><h4>Farmers Market at Waterford</h4><p>Weekly farmers market with local produce, crafts, and artisans every Saturday</p></div></div>
+      <div class="ev"><div class="ev-d"><div class="m">Sep</div><div class="d">13</div></div><div class="ev-i"><h4>Leland Fall Festival</h4><p>Annual community fair with rides, local food, live entertainment · Town Center</p></div></div>
+      <div class="ev"><div class="ev-d"><div class="m">Oct</div><div class="d">11</div></div><div class="ev-i"><h4>Leland Trunk-or-Treat & Fall Market</h4><p>Family safe Halloween event with costume contest and pumpkin patch</p></div></div>
+      <div class="ev"><div class="ev-d"><div class="m">Dec</div><div class="d">5</div></div><div class="ev-i"><h4>Leland Holiday Tree Lighting</h4><p>Annual Christmas celebration with tree lighting, Santa, carolers · Town Hall</p></div></div>
+    </div>
+    <p style="margin-top:8px; font-size:0.74rem; color:var(--mid);">Events: <a href="https://www.townofleland.com" target="_blank" style="color:var(--coral);">townofleland.com</a></p>
+  </div>
+
+  <div class="section" id="realestate">
+    <div class="sec-title"><h2>Real Estate & Housing</h2><span class="chip">LELAND NC MARKET</span></div>
+    <div class="ig">
+      <div class="ic">
+        <h3>🏠 Market Snapshot</h3>
+        <ul>
+          <li><span>Median Home Price</span><span class="sm">~$330,000</span></li>
+          <li><span>Median Rent</span><span class="sm">~$1,750/mo</span></li>
+          <li><span>Property Tax Rate</span><span class="sm">~0.62% (Brunswick Co.)</span></li>
+          <li><span>Growth</span><span class="sm">9.4% YoY population</span></li>
+        </ul>
+      </div>
+      <div class="ic">
+        <h3>🔗 Housing Resources</h3>
+        <ul>
+          <li><span>Zillow</span><a href="https://www.zillow.com/leland-nc/" target="_blank">Leland Homes</a></li>
+          <li><span>Realtor.com</span><a href="https://www.realtor.com/realestateandhomes-search/Leland_NC" target="_blank">Listings</a></li>
+          <li><span>Brunswick CAD</span><a href="https://www.brunsco.net/tax" target="_blank">Tax Records</a></li>
+          <li><span>NC Housing</span><a href="https://www.nchfa.com" target="_blank">First-Time Buyers</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /content -->
+
+<aside class="sb">
+  <div class="ad-sb">AD · 300×250<br>Display Unit</div>
+
+  <div class="sb-card">
+    <h3>⚡ Quick Links</h3>
+    <ul>
+      <li><a href="https://www.townofleland.com" target="_blank">Town of Leland Official</a></li>
+      <li><a href="https://www.bcswan.net" target="_blank">Brunswick County Schools</a></li>
+      <li><a href="https://www.brunswickcountync.gov" target="_blank">Brunswick County Gov</a></li>
+      <li><a href="https://www.ncbeaches.com" target="_blank">NC Beach Conditions</a></li>
+      <li><a href="https://www.ncdot.gov" target="_blank">NCDOT Road Conditions</a></li>
+      <li><a href="https://www.ncdmv.gov" target="_blank">NC DMV</a></li>
+      <li><a href="https://www.ncvotes.org" target="_blank">NC Voter Registration</a></li>
+      <li><a href="https://www.usps.com" target="_blank">USPS Post Office</a></li>
+    </ul>
+  </div>
+
+  <div class="sb-card">
+    <h3>🗺️ Leland, NC Map</h3>
+    <div class="map-b">
+      <span style="font-size:2rem;">🗺️</span>
+      <span style="font-size:0.78rem; color:var(--ocean);">Leland, NC 28451</span>
+      <a href="https://maps.google.com/?q=Leland,NC" target="_blank">Open Google Maps →</a>
+    </div>
+  </div>
+
+  <div class="sb-card">
+    <h3>🏫 Brunswick Co. Schools</h3>
+    <ul>
+      <li><a href="https://www.bcswan.net" target="_blank">District Website</a></li>
+      <li><a href="https://www.bcswan.net" target="_blank">School Calendar</a></li>
+      <li><a href="https://www.bcswan.net" target="_blank">Enroll a Student</a></li>
+      <li><a href="https://www.bcswan.net" target="_blank">Athletics Schedules</a></li>
+      <li><a href="https://www.bcswan.net" target="_blank">Bus Transportation</a></li>
+    </ul>
+  </div>
+
+  <div class="ad-sb">AD · 300×600<br>Half-Page Unit</div>
+
+  <div class="sb-card">
+    <h3>📰 Local News</h3>
+    <ul>
+      <li><a href="https://www.starnewsonline.com" target="_blank">Wilmington StarNews</a></li>
+      <li><a href="https://www.wect.com" target="_blank">WECT News 6</a></li>
+      <li><a href="https://www.wwaytv3.com" target="_blank">WWAY TV3</a></li>
+      <li><a href="https://portcitydaily.com" target="_blank">Port City Daily</a></li>
+      <li><a href="https://www.brunswicknews.com" target="_blank">Brunswick Beacon</a></li>
+    </ul>
+  </div>
+
+  <div class="sb-card">
+    <h3>🌊 Beach Quick Info</h3>
+    <ul>
+      <li><a href="https://www.ncaquariums.com" target="_blank">NC Aquarium Fort Fisher</a></li>
+      <li><a href="https://www.ncparks.gov" target="_blank">Carolina Beach State Park</a></li>
+      <li><a href="https://www.ncbeaches.com" target="_blank">NC Beach Water Quality</a></li>
+      <li><a href="https://tidesandcurrents.noaa.gov" target="_blank">NOAA Tide Charts</a></li>
+      <li><a href="https://www.fisheries.noaa.gov" target="_blank">NC Fishing Licenses</a></li>
+    </ul>
+  </div>
+
+  <div class="sb-card">
+    <h3>🏘️ Nearby Cities</h3>
+    <ul>
+      <li><a href="https://www.wilmingtonnc.gov" target="_blank">Wilmington, NC (10 min)</a></li>
+      <li><a href="#" target="_blank">Navassa, NC (8 min)</a></li>
+      <li><a href="#" target="_blank">Bolivia, NC (25 min)</a></li>
+      <li><a href="#" target="_blank">Shallotte, NC (35 min)</a></li>
+      <li><a href="https://www.myrtle beach.com" target="_blank">Myrtle Beach, SC (75 min)</a></li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+<footer>
+  <div class="f-g">
+    <div class="f-c"><h4>Leland NC Directory</h4><ul><li><a href="#biz">Browse Businesses</a></li><li><a href="#restaurants">Dining</a></li><li><a href="#health">Healthcare</a></li><li><a href="#schools">Schools</a></li><li><a href="#events">Events</a></li></ul></div>
+    <div class="f-c"><h4>Town Resources</h4><ul><li><a href="https://www.townofleland.com" target="_blank">Town of Leland</a></li><li><a href="https://www.bcswan.net" target="_blank">Brunswick Co. Schools</a></li><li><a href="#city">Town Services</a></li><li><a href="#beach">Beach & Outdoors</a></li></ul></div>
+    <div class="f-c"><h4>County & State</h4><ul><li><a href="https://www.brunswickcountync.gov" target="_blank">Brunswick County</a></li><li><a href="https://www.ncdot.gov" target="_blank">NC Roads</a></li><li><a href="https://www.ncdmv.gov" target="_blank">NC DMV</a></li><li><a href="https://www.ncparks.gov" target="_blank">NC State Parks</a></li></ul></div>
+    <div class="f-c"><h4>This Directory</h4><ul><li><a href="#">List Your Business</a></li><li><a href="#">Advertise Here</a></li><li><a href="#">Update a Listing</a></li><li><a href="#">Contact Us</a></li></ul></div>
+  </div>
+  <div class="f-b">
+    <span>© 2026 Leland NC Directory · lelandNCdirectory.com</span>
+    <span>Independent local guide · Not affiliated with the Town of Leland</span>
+  </div>
+</footer>
+
+</body>
+</html>
